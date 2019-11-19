@@ -1,6 +1,10 @@
 $sidebar-spacing-base: 5px;
 
 .sidebar-wrapper {
+  position: sticky;
+  top: 118px; // nav bar height plus search bar height
+
+  float: left;
   width: 260px;
 
   background: #F7F7F7;

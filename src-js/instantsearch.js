@@ -98,7 +98,7 @@ export function init () {
       resultDisplay.style.display = "block";
     } else {
       resultDisplay.appendChild(stateHolder);
-      pageBody.style.display = "flex";
+      pageBody.style.display = "block";
       resultDisplay.style.display = "none";
     }
   };
