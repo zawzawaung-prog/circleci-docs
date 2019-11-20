@@ -15,6 +15,10 @@ $sidebar-bg-color: #F7F7F7;
     white               $sidebar-width,
     white
   );
+
+  @media screen and (max-width: $screen-sm) {
+    background: none;
+  }
 }
 
 .article-container {
@@ -156,7 +160,6 @@ $sidebar-bg-color: #F7F7F7;
 .sidebar-mobile-wrapper {
   border-top: 1px solid $gray-200;
   border-bottom: 1px solid $gray-200;
-  padding: 50px 0 0 0;
   width: 100%;
   background: $gray-100;
   display: none;
