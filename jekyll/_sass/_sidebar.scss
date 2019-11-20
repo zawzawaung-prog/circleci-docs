@@ -1,13 +1,34 @@
 $sidebar-spacing-base: 5px;
+$sidebar-width: 260px;
+$sidebar-bg-color: #F7F7F7;
+
+.main-body {
+  // Visually stretch darker sidebar background and right-border to bottom of
+  // main-body wrapper element by re-creating its background color/width and
+  // right border color.
+  background: linear-gradient(
+    to right,
+    $sidebar-bg-color,
+    $sidebar-bg-color   $sidebar-width - 1,
+    $gray-200           $sidebar-width - 1,
+    $gray-200           $sidebar-width,
+    white               $sidebar-width,
+    white
+  );
+}
+
+.article-container {
+  width: calc(100% - #{$sidebar-width});
+}
 
 .sidebar-wrapper {
   position: sticky;
   top: 118px; // nav bar height plus search bar height
 
   float: left;
-  width: 260px;
+  width: $sidebar-width;
 
-  background: #F7F7F7;
+  background: $sidebar-bg-color;
   border-right: 1px solid $gray-200;
 
   @media screen and (max-width: $screen-sm) {
@@ -18,7 +39,7 @@ $sidebar-spacing-base: 5px;
 .sidebar {
   font-family: "roboto";
   padding: 30px 24px 60px 16px;
-  width: 260px;
+  width: $sidebar-width;
 
   &::-webkit-scrollbar-track {
     box-shadow: none;

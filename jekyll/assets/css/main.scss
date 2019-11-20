@@ -34,7 +34,6 @@ div.main-body {
 	display: flex;
 	max-width: 1200px;
 	margin: 0 auto;
-	background: #fff;
 }
 
 #hits-template {
@@ -144,7 +143,6 @@ div.article-container{
 		width: 100%;
 	}
 	padding: 15px 48px 0 48px;
-	width: calc(100% - 260px);
 }
 	article{
 		h2,
@@ -246,7 +244,6 @@ body.homepage{
       width: 100%;
     }
 	  padding: 15px 48px 0 48px;
-    width: calc(100% - 260px);
   }
 
 	article{
