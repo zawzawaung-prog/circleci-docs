@@ -10,7 +10,7 @@ The sections below describe the endpoints you may call to return Project informa
 curl https://circleci.com/api/v1.1/projects?circle-token=:token
 ```
 
-```json
+```json5
 [ {
   "vcs_url": "https://github.com/circleci/mongofinil",
   "followed": true, // true if you follow this project in CircleCI
@@ -59,7 +59,7 @@ Returns an array of all projects you are currently following on CircleCI, with b
 curl -X POST https://circleci.com/api/v1.1/project/:vcs-type/:username/:project/follow?circle-token=:token
 ```
 
-```json
+```json5
 {
   "followed" : true,
   "first_build" : {
@@ -133,7 +133,7 @@ Follows a new project. CircleCI will then monitor the project for automatic buil
 curl https://circleci.com/api/v1.1/recent-builds?limit=1&shallow=true
 ```
 
-```json
+```json5
 [ {
   "vcs_url" : "https://github.com/circleci/mongofinil",
   "build_url" : "https://circleci.com/gh/circleci/mongofinil/22",
@@ -188,7 +188,7 @@ curl https://circleci.com/api/v1.1/project/:vcs-type/:username/:project?circle-t
 curl https://circleci.com/api/v1.1/recent-builds?limit=1&shallow=true
 ```
 
-```json
+```json5
 [ {
   "vcs_url" : "https://github.com/circleci/mongofinil",
   "build_url" : "https://circleci.com/gh/circleci/mongofinil/22",
@@ -234,7 +234,7 @@ The example to the right shows a user request for recent build information. Noti
 
 #### Sample Request Using the `Shallow` Parameter
 
-```json
+```json5
 [{
 	"committer_date": "2019-04-12T10:44:51-07:00",
 	"body": "",
