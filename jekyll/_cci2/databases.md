@@ -27,12 +27,14 @@ In the primary image the config defines an environment variable with the `enviro
 
 Set the POSTGRES_USER environment variable in your CircleCI config to `postgres` to add the role to the image as follows:
 
-          - image: circleci/postgres:9.6-alpine
-            auth:
-              username: mydockerhub-user
-              password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
-            environment:
-              POSTGRES_USER: postgres
+```yaml
+      - image: circleci/postgres:9.6-alpine
+        auth:
+          username: mydockerhub-user
+          password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
+        environment:
+          POSTGRES_USER: postgres
+```
 
 This Postgres image in the example is slightly modified already with `-ram` at the end. It runs in-memory so it does not  hit the disk and that will significantly improve the testing performance on this PostgreSQL database by using this image.
 
