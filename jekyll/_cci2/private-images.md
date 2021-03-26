@@ -19,6 +19,7 @@ CircleCI has partnered with Docker to ensure that our users can continue to acce
 
 
 ### Docker executor
+{: #docker-executor }
 
 For the [Docker]({{ site.baseurl }}/2.0/executor-types/#using-docker) executor, specify username and password in the `auth` field of your [config.yml]({{ site.baseurl }}/2.0/configuration-reference/) file. To protect the password, place it in a [context]({{ site.baseurl }}/2.0/contexts), or use a per-project Environment Variable.
 
@@ -57,6 +58,7 @@ You can also use images from a private repository like [gcr.io](https://cloud.go
 
 
 ### Machine executor (with Docker orb)
+{: #machine-executor-with-docker-orb }
 
 Alternatively, you can utilize the `machine` executor to achieve the same result using the Docker orb:
 
@@ -86,6 +88,7 @@ jobs:
 
 
 ### Machine executor (with Docker CLI)
+{: #machine-executor-with-docker-cli }
 
 or with cli:
 
@@ -107,6 +110,7 @@ jobs:
 
 
 ### AWS ECR
+{: #aws-ecr }
 
 CircleCI now supports pulling private images from Amazon's ECR service.
 
@@ -181,5 +185,6 @@ workflows:
 ```
 
 ## See also
+{: #see-also }
 
 [Configuring CircleCI]({{ site.baseurl }}/2.0/configuration-reference/)
