@@ -26,6 +26,16 @@ You can see a complete `config.yml` in our [full example](#example-full-configur
 
 ---
 
+## **`setup`**
+{: #setup }
+
+Key | Required | Type | Description
+----|-----------|------|------------
+setup | N | Boolean | Designates the config.yaml for use of CircleCI's [dynamic configuration]({{ site.baseurl }}/2.0/dynamic-config/) feature.
+{: class="table table-striped"}
+
+The `setup` field enables you to conditionally trigger configurations from outside the primary .circleci parent directory, update pipeline parameters, or generate customized configurations.
+
 ## **`version`**
 {: #version }
 
@@ -145,7 +155,7 @@ Jobs have a maximum runtime of 5 hours. If your jobs are timing out, consider ru
 ### **<`job_name`>**
 {: #lessjobnamegreater }
 
-Each job consists of the job's name as a key and a map as a value. A name should be unique within a current `jobs` list. The value map has the following attributes:
+Each job consists of the job's name as a key and a map as a value. A name should be case insensitive unique within a current `jobs` list. The value map has the following attributes:
 
 Key | Required | Type | Description
 ----|-----------|------|------------
